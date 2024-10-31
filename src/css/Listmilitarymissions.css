@@ -3,6 +3,9 @@
     width: 80%;
     height: 70%;
     background-color:rgb(13, 94, 23);
-    border-radius: 12px;
-    
+    border-radius: 12px;  
+    display: flex;
+    flex-direction: column;  
+    align-items: center;    
 }
+

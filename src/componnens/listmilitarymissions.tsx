@@ -1,9 +1,15 @@
 import React from 'react'
 import '../css/Listmilitarymissions.css'
-export default function Listmilitarymissions() {
+import { IMissionsList } from '../interface/mission'
+import RowInList from './rowInList'
+export default function Listmilitarymissions({setProsess, listmilitarymissions }: IMissionsList) {
+  
   return (
-    <div className='main-list'>
-      
+    <div className='main-list'>      
+        {listmilitarymissions.map((mission) => (          
+            <RowInList setProsess = {setProsess} mission = {mission}/>      
+        ))}
+
     </div>
   )
 }
