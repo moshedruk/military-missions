@@ -1,5 +1,5 @@
 
 export enum Epriority {
-    low,
-    higt  
+    low = "low",
+    higt= "higt"  
 }
