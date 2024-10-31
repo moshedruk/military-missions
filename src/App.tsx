@@ -7,8 +7,8 @@ import { IMissions } from './interface/mission'
 
 function App() {
   const [listmilitarymissions,setListmilitarymissions] = useState<IMissions[]>([])
-  const [prosess,setProsess] = useState("")
-  const getAllMission = async() => {    
+  const [prosess,setProsess] = useState<number>(0)
+   const getAllMission = async() => {    
     const response =await fetch(`https://reactexambackend.onrender.com/missions/8438746`)
     const data = await response.json()    
     setListmilitarymissions(data)
@@ -16,7 +16,7 @@ function App() {
   }
   useEffect(() => {    
     getAllMission()
-    console.log("dddddddd")
+    console.log(prosess)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [prosess])
 

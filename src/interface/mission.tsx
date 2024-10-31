@@ -9,13 +9,13 @@ export interface IMissions {
 }
 export interface IMissionsList {
         listmilitarymissions: IMissions[] 
-        setProsess: (value: string) => void
+        setProsess: (value: (x:number)=>number) => void
 }
 export interface IMissionscard {
         mission: IMissions
-        setProsess: (value: string) => void
+        setProsess: (value:(x:number)=>number) => void
 }
 export interface Iform {
         
-        setProsess: (value: string) => void
+        setProsess: (value: (x:number)=>number) => void
 }

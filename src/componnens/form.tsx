@@ -7,8 +7,8 @@ export default function Form({setProsess}:Iform) {
     const [valuestatus, setValuestatus] = useState("");
     const [valuepriority, setValuepriority] = useState("");
 
-    const handleChangestatus = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        setValuestatus(e.target.value);
+    const handleChangestatus = async(e: React.ChangeEvent<HTMLSelectElement>) => {
+        await setValuestatus(e.target.value);
         console.log(valuestatus)
     };
     const handleChangedepriority = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -31,7 +31,8 @@ export default function Form({setProsess}:Iform) {
                     description: descriptionInput.current?.value
                 }),
             })
-            setProsess("Mission" + 1)
+            console.log("jhjhjhjhhj")
+            setProsess( prosess => prosess+ 1)
             if (!res.ok) {
                 console.log(`HTTP error: ${res}`, await res.json())
 
@@ -49,11 +50,13 @@ export default function Form({setProsess}:Iform) {
             <div className='div-form'>
                 <input type='text' ref={nameInput} placeholder='Enter your name' />
                 <select name="cars" id="cars" onChange={handleChangestatus} >
+                <option >-</option>
                     <option value={Estatus.Pending}>{Estatus.Pending}</option>
                     <option value={Estatus.In_Progress}>{Estatus.In_Progress}</option>
                     <option value={Estatus.Completed}>{Estatus.Completed}</option>
                 </select>
                 <select name="cars" id="cars" onChange={handleChangedepriority}>
+                <option >-</option>
                     <option value={Epriority.High}>{Epriority.High}</option>
                     <option value={Epriority.Low}>{Epriority.Low}</option>
                     <option value={Epriority.Medium}>{Epriority.Medium}</option>
