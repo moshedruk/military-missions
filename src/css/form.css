@@ -1,0 +1,43 @@
+
+.main-form{
+    width: 80%;
+    height: 25%;
+    background-color:rgb(13, 94, 23);
+    border-radius: 12px;
+}
+.div-form{
+    width: 99%;
+    height: 75%;
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    
+    align-items: center;  
+}
+input{
+    width: 94%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: none;    
+    font-size: 16px;
+}
+select{
+    width: 94%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 16px;
+}
+.btn-add{
+    width: 19%;
+    height: 40px;   
+    border-radius: 5px;
+    background-color: rgb(247, 6, 38);
+    color: rgb(252, 248, 248);
+    border: none;   
+    margin-left: 10px; 
+    margin-bottom: 10px;
+    font-size: 16px;
+}
